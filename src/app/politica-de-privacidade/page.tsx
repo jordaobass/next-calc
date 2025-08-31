@@ -321,7 +321,7 @@ export default function PoliticaPrivacidadePage() {
                   <h4 className="font-semibold text-emerald-800 mb-2">Como Exercer seus Direitos</h4>
                   <p className="text-emerald-700">
                     Para exercer qualquer destes direitos, envie um email para{' '}
-                    <strong>contato@nextcalc.com.br</strong> com o assunto "LGPD - [Seu Direito]" 
+                    <strong>contato@nextcalc.com.br</strong> com o assunto &quot;LGPD - [Seu Direito]&quot; 
                     e aguarde nossa resposta em até 15 dias úteis.
                   </p>
                 </div>
@@ -385,7 +385,7 @@ export default function PoliticaPrivacidadePage() {
                   <h4 className="font-semibold text-blue-800 mb-3">Entre em Contato</h4>
                   <div className="space-y-2">
                     <p><strong>Email geral:</strong> contato@nextcalc.com.br</p>
-                    <p><strong>Assuntos LGPD:</strong> contato@nextcalc.com.br (assunto: "LGPD")</p>
+                    <p><strong>Assuntos LGPD:</strong> contato@nextcalc.com.br (assunto: &quot;LGPD&quot;)</p>
                     <p><strong>Site:</strong> {siteConfig.url}</p>
                     <p><strong>Resposta:</strong> Até 15 dias úteis</p>
                   </div>

@@ -50,8 +50,7 @@ export function AdProvider({ children }: AdProviderProps) {
     // Verificar se o Google AdSense está carregado
     const checkAdSenseLoaded = () => {
       if (typeof window !== 'undefined') {
-        // @ts-ignore
-        if (window.adsbygoogle && window.adsbygoogle.loaded) {
+        if ((window as any).adsbygoogle && (window as any).adsbygoogle.loaded) {
           setAdsEnabled(true);
         } else {
           detectAdBlock();

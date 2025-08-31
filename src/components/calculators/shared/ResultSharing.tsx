@@ -77,7 +77,7 @@ export function ResultSharing({
   };
 
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
           title: title,
@@ -174,7 +174,7 @@ export function ResultSharing({
             >
               <Twitter className="h-4 w-4" />
             </Button>
-            {navigator.share && (
+            {typeof navigator !== 'undefined' && navigator.share && (
               <Button
                 onClick={handleNativeShare}
                 variant="ghost"

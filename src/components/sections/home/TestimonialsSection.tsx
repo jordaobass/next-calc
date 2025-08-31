@@ -70,7 +70,7 @@ export function TestimonialsSection() {
                   <div className="relative">
                     <Quote className="h-8 w-8 text-emerald-100 mb-2" />
                     <p className="text-muted-foreground leading-relaxed">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </p>
                   </div>
 

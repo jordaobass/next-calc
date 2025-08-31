@@ -93,7 +93,7 @@ export default function TermosDeUsoPage() {
                   <li>Calculadora de Seguro Desemprego</li>
                 </ul>
                 <p>
-                  Os serviços são oferecidos "como estão" e destinam-se exclusivamente 
+                  Os serviços são oferecidos &quot;como estão&quot; e destinam-se exclusivamente 
                   para fins informativos e educacionais.
                 </p>
               </CardContent>
@@ -232,7 +232,7 @@ export default function TermosDeUsoPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-1 ml-4">
                   <li>Aviso na página principal da plataforma</li>
-                  <li>Atualização da data de "última modificação"</li>
+                  <li>Atualização da data de &quot;última modificação&quot;</li>
                   <li>Notificação por email quando aplicável</li>
                 </ul>
                 <p>

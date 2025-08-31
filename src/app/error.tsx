@@ -77,7 +77,7 @@ export default function Error({ error, reset }: ErrorProps) {
               <div>
                 <h4 className="font-semibold">Tente novamente</h4>
                 <p className="text-sm text-muted-foreground">
-                  Clique no botão "Tentar Novamente" abaixo para recarregar a página.
+                  Clique no botão &quot;Tentar Novamente&quot; abaixo para recarregar a página.
                 </p>
               </div>
             </div>
