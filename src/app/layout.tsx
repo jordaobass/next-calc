@@ -91,6 +91,7 @@ export const metadata: Metadata = {
   other: {
     'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || '',
     'msvalidate.01': process.env.BING_SITE_VERIFICATION || '',
+    'google-adsense-account': 'ca-pub-3660869229459383',
   },
 };
 
@@ -105,6 +106,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Google AdSense Account Verification */}
+        <meta name="google-adsense-account" content="ca-pub-3660869229459383" />
         {/* Google Analytics */}
         {GA_ID && (
           <>
