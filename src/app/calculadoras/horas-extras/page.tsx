@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
 import { HorasExtrasForm } from '@/components/calculators/horas-extras/HorasExtrasForm';
 import { HorasExtrasResult } from '@/components/calculators/horas-extras/HorasExtrasResult';
 import { RelatedCalculators } from '@/components/calculators/shared/RelatedCalculators';

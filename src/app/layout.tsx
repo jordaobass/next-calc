@@ -152,9 +152,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AdProvider>
+          <a href="#main-content" className="skip-link">
+            Pular para o conteúdo principal
+          </a>
           <div className="relative flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">{children}</main>
             <Footer />
           </div>
         </AdProvider>

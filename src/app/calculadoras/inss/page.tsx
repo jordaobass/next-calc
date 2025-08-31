@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
 import { INSSForm } from '@/components/calculators/inss/INSSForm';
 import { INSSResult } from '@/components/calculators/inss/INSSResult';
 import { RelatedCalculators } from '@/components/calculators/shared/RelatedCalculators';

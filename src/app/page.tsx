@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { HeroSection } from '@/components/sections/hero/HeroSection';
 import { BenefitsSection } from '@/components/sections/home/BenefitsSection';
 import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
@@ -5,6 +6,12 @@ import { FAQSection } from '@/components/sections/home/FAQSection';
 import { StatsSection } from '@/components/sections/home/StatsSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { JsonLd, organizationSchema, websiteSchema } from '@/components/seo/JsonLd';
+import { siteConfig } from '@/lib/config/site';
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description: siteConfig.description,
+};
 
 export default function Home() {
   return (

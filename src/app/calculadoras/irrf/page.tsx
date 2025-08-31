@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import type { Metadata } from 'next';
 import { IRRFForm } from '@/components/calculators/irrf/IRRFForm';
 import { IRRFResult } from '@/components/calculators/irrf/IRRFResult';
 import { RelatedCalculators } from '@/components/calculators/shared/RelatedCalculators';

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { RescisaoForm } from '@/components/calculators/rescisao/RescisaoForm';
 import { RescisaoResult } from '@/components/calculators/rescisao/RescisaoResult';
-import { CalculatorWrapper } from '@/components/calculators/shared/CalculatorWrapper';
 import { calculateRescission, RescissionResult } from '@/lib/calculations/rescisao';
 import { RescissionInput } from '@/lib/validations/calculator-schemas';
 import { JsonLd, calculatorSchema, breadcrumbSchema } from '@/components/seo/JsonLd';

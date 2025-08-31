@@ -54,29 +54,41 @@ export const CurrencyInput = forwardRef<HTMLInputElement, CurrencyInputProps>(
       }
     };
 
+    const inputId = `currency-${label.toLowerCase().replace(/\s+/g, '-')}`;
+    const errorId = `${inputId}-error`;
+
     return (
       <div className={`space-y-2 ${className}`}>
-        <Label htmlFor={label} className={required ? "after:content-['*'] after:ml-0.5 after:text-red-500" : ''}>
+        <Label htmlFor={inputId} className={required ? "after:content-['*'] after:ml-0.5 after:text-red-500" : ''}>
           {label}
         </Label>
         <div className="relative">
-          <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">
+          <span 
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground"
+            aria-hidden="true"
+          >
             R$
           </span>
           <Input
             ref={ref}
-            id={label}
+            id={inputId}
             type="text"
             value={displayValue}
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder={placeholder}
             disabled={disabled}
+            required={required}
+            aria-invalid={error ? 'true' : 'false'}
+            aria-describedby={error ? errorId : undefined}
+            aria-label={`${label} em reais`}
             className={`pl-10 ${error ? 'border-red-500' : ''}`}
           />
         </div>
         {error && (
-          <p className="text-sm text-red-500">{error}</p>
+          <p id={errorId} role="alert" className="text-sm text-red-500">
+            {error}
+          </p>
         )}
       </div>
     );
