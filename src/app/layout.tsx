@@ -124,11 +124,10 @@ export default function RootLayout({
         )}
         
         {/* Google AdSense */}
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3660869229459383"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
         
         {/* Fallback AdSense (se variável de ambiente estiver definida) */}
