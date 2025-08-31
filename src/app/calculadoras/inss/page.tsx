@@ -35,7 +35,7 @@ export default function INSSPage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('inss', calculationResult.inssDiscount);
+      trackCalculation('inss', { salary: data.salary });
       
       // Add to calculation history
       addCalculation(

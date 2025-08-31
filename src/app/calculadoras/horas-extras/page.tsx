@@ -35,7 +35,7 @@ export default function HorasExtrasPage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('horas-extras', calculationResult.totalWithDSR);
+      trackCalculation('horas-extras', { salary: data.salary });
       
       // Add to calculation history
       addCalculation(

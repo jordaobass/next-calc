@@ -34,7 +34,7 @@ export default function AdicionalInsalubridadePage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('adicional-insalubridade', calculationResult.additionalValue);
+      trackCalculation('adicional-insalubridade', { salary: data.salary });
       
       // Add to calculation history
       const gradeName = calculationResult.details.insalubricadeGrade === 'minimum' ? 'Mínimo' : 

@@ -10,7 +10,7 @@ interface EducationalSection {
 }
 
 interface EducationalContentProps {
-  calculatorType: 'rescisao' | 'ferias' | 'decimo-terceiro' | 'fgts';
+  calculatorType: 'rescisao' | 'ferias' | 'decimo-terceiro' | 'fgts' | 'horas-extras' | 'inss' | 'irrf' | 'seguro-desemprego' | 'adicional-noturno' | 'adicional-insalubridade' | 'periculosidade';
   className?: string;
 }
 
@@ -274,7 +274,7 @@ const educationalContent = {
 };
 
 export function EducationalContent({ calculatorType, className = '' }: EducationalContentProps) {
-  const content = educationalContent[calculatorType];
+  const content = educationalContent[calculatorType as keyof typeof educationalContent];
   
   if (!content) {
     return null;

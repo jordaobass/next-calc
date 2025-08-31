@@ -34,7 +34,7 @@ export default function AdicionalNoturnoPage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('adicional-noturno', calculationResult.additionalValue);
+      trackCalculation('adicional-noturno', { salary: data.salary });
       
       // Add to calculation history
       addCalculation(

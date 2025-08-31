@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export interface CalculationHistoryItem {
   id: string;
-  type: 'rescisao' | 'ferias' | 'decimo-terceiro' | 'fgts';
+  type: 'rescisao' | 'ferias' | 'decimo-terceiro' | 'fgts' | 'horas-extras' | 'inss' | 'irrf' | 'seguro-desemprego' | 'adicional-noturno' | 'adicional-insalubridade' | 'periculosidade';
   title: string;
   date: string;
   inputData: Record<string, any>;

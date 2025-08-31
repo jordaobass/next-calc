@@ -34,7 +34,7 @@ export default function PericulosidadePage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('periculosidade', calculationResult.additionalValue);
+      trackCalculation('periculosidade', { salary: data.salary });
       
       // Add to calculation history
       addCalculation(

@@ -34,7 +34,7 @@ export default function SeguroDesempregoPage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('seguro-desemprego', calculationResult.totalValue);
+      trackCalculation('seguro-desemprego', { salary: data.averageSalary });
       
       // Add to calculation history
       const eligibilityStatus = calculationResult.isEligible ? 'Elegível' : 'Não Elegível';

@@ -85,7 +85,6 @@ export function SeguroDesempregoForm({ onCalculate, loading }: SeguroDesempregoF
                     onChange={(value) => field.onChange(parseFloat(value) || 0)}
                     required
                     error={errors.averageSalary?.message}
-                    description="Média dos últimos 3 salários recebidos"
                   />
                 )}
               />

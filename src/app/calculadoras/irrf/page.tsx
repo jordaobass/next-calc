@@ -35,7 +35,7 @@ export default function IRRFPage() {
       setInputData(data);
       
       // Track analytics
-      trackCalculation('irrf', calculationResult.irrfDiscount);
+      trackCalculation('irrf', { salary: data.salary });
       
       // Add to calculation history
       addCalculation(
