@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Calculator, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/lib/config/site';
+import { CalculatorDropdown } from './CalculatorDropdown';
 import { useState } from 'react';
 
 export function Header() {
@@ -22,12 +23,7 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="ml-8 hidden items-center space-x-6 md:flex">
-          <Link
-            href="/calculadoras"
-            className="text-sm font-medium transition-colors hover:text-emerald-600"
-          >
-            Calculadoras
-          </Link>
+          <CalculatorDropdown />
           <Link
             href="/ferramentas"
             className="text-sm font-medium transition-colors hover:text-emerald-600"
@@ -40,12 +36,12 @@ export function Header() {
           >
             Sobre
           </Link>
-          <Link
-            href="/contato"
+          <a
+            href="mailto:contato@nextcalc.com.br"
             className="text-sm font-medium transition-colors hover:text-emerald-600"
           >
             Contato
-          </Link>
+          </a>
         </nav>
 
         <div className="ml-auto flex items-center space-x-2">
@@ -65,13 +61,7 @@ export function Header() {
         {isMenuOpen && (
           <div className="absolute left-0 right-0 top-14 border-b bg-background p-4 shadow-lg md:hidden">
             <nav className="flex flex-col space-y-3">
-              <Link
-                href="/calculadoras"
-                className="text-sm font-medium transition-colors hover:text-emerald-600"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Calculadoras
-              </Link>
+              <CalculatorDropdown onItemClick={() => setIsMenuOpen(false)} />
               <Link
                 href="/ferramentas"
                 className="text-sm font-medium transition-colors hover:text-emerald-600"
@@ -86,13 +76,13 @@ export function Header() {
               >
                 Sobre
               </Link>
-              <Link
-                href="/contato"
+              <a
+                href="mailto:contato@nextcalc.com.br"
                 className="text-sm font-medium transition-colors hover:text-emerald-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contato
-              </Link>
+              </a>
             </nav>
           </div>
         )}

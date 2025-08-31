@@ -39,7 +39,7 @@ export function RescisaoForm({ onCalculate, loading }: RescisaoFormProps) {
   } = useForm({
     resolver: zodResolver(rescissionInputSchema),
     defaultValues: {
-      salary: 0,
+      salary: 1412, // Valor padrão com salário mínimo 2024
       admissionDate: new Date('2023-01-01'),
       dismissalDate: new Date(),
       rescissionType: RESCISSION_TYPES.DISMISSAL_WITHOUT_CAUSE,

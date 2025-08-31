@@ -15,6 +15,12 @@ const currencySchema = z.number()
   .max(999999.99, 'Valor muito alto')
   .transform((val) => Math.round(val * 100) / 100);
 
+// Schema para valores monetários opcionais (podem ser 0)
+const optionalCurrencySchema = z.number()
+  .min(0, 'Valor não pode ser negativo')
+  .max(999999.99, 'Valor muito alto')
+  .transform((val) => Math.round(val * 100) / 100);
+
 // Schema para dependentes
 const dependentsSchema = z.number()
   .int('Número de dependentes deve ser inteiro')
@@ -48,8 +54,8 @@ export const rescissionInputSchema = z.object({
     .max(12, 'Máximo 12 meses')
     .optional()
     .default(0),
-  fgtsBalance: currencySchema.optional().default(0),
-  avgSalaryLast3Months: currencySchema.optional(),
+  fgtsBalance: optionalCurrencySchema.optional().default(0),
+  avgSalaryLast3Months: optionalCurrencySchema.optional(),
 }).refine(
   (data) => data.dismissalDate > data.admissionDate,
   {

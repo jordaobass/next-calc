@@ -1,0 +1,28 @@
+{
+  "name": "NextCalc - Calculadoras Trabalhistas Gratuitas",
+  "short_name": "NextCalc",
+  "description": "Calculadoras trabalhistas gratuitas baseadas na CLT para calcular rescisão, férias, 13º salário, FGTS e mais.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#059669",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["finance", "business", "utilities"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

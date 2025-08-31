@@ -28,7 +28,7 @@ export function FeriasForm({ onCalculate, loading }: FeriasFormProps) {
   } = useForm({
     resolver: zodResolver(vacationInputSchema),
     defaultValues: {
-      salary: 0,
+      salary: 1412, // Valor padrão com salário mínimo 2024
       admissionDate: new Date('2023-01-01'),
       vacationStartDate: new Date(),
       vacationDays: 30,

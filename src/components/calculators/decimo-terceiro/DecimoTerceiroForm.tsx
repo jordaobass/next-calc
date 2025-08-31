@@ -29,7 +29,7 @@ export function DecimoTerceiroForm({ onCalculate, loading }: DecimoTerceiroFormP
   } = useForm({
     resolver: zodResolver(thirteenthSalaryInputSchema),
     defaultValues: {
-      salary: 0,
+      salary: 1412, // Valor padrão com salário mínimo 2024
       admissionDate: new Date('2024-01-01'),
       referenceDate: new Date(),
       dependents: 0,

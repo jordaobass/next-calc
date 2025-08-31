@@ -98,7 +98,7 @@ export function FAQSection() {
             Não encontrou a resposta que procurava?
           </p>
           <a 
-            href="/contato" 
+            href="mailto:contato@calctrabalhista.com.br" 
             className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium"
           >
             Entre em contato conosco

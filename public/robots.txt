@@ -1,20 +1,57 @@
 User-agent: *
 Allow: /
 
-# Disallow admin or internal pages (if any)
+# Sitemap location
+Sitemap: https://nextcalc.com.br/sitemap.xml
+
+# Important pages
+Allow: /calculadoras/
+Allow: /sobre
+Allow: /termos-de-uso
+Allow: /politica-de-privacidade
+
+# Specific calculators (all available)
+Allow: /calculadoras/rescisao
+Allow: /calculadoras/ferias
+Allow: /calculadoras/decimo-terceiro
+Allow: /calculadoras/fgts
+Allow: /calculadoras/horas-extras
+Allow: /calculadoras/inss
+Allow: /calculadoras/irrf
+Allow: /calculadoras/adicional-noturno
+Allow: /calculadoras/adicional-periculosidade
+Allow: /calculadoras/adicional-insalubridade
+Allow: /calculadoras/seguro-desemprego
+
+# Block admin areas and system files
 Disallow: /admin/
 Disallow: /_next/
-Disallow: /api/
+Disallow: /api/internal/
+Disallow: /*.json$
+Disallow: /manifest.json
 
-# Allow all calculators
-Allow: /calculadoras/
-Allow: /rescisao/
-Allow: /ferias/
-Allow: /decimo-terceiro/
-Allow: /fgts/
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
 
-# Sitemap location
-Sitemap: https://calctrabalhista.com.br/sitemap.xml
+User-agent: Bingbot
+Allow: /
 
-# Crawl delay (optional)
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Crawl delay
 Crawl-delay: 1

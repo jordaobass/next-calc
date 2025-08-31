@@ -99,12 +99,12 @@ export function Footer() {
               >
                 Sobre Nós
               </Link>
-              <Link
-                href="/contato"
+              <a
+                href="mailto:contato@calctrabalhista.com.br"
                 className="transition-colors hover:text-emerald-600"
               >
                 Contato
-              </Link>
+              </a>
             </nav>
           </div>
         </div>

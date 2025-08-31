@@ -20,53 +20,77 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
-  keywords: [
-    'calculadora trabalhista',
-    'calcular rescisão',
-    'calcular férias',
-    '13º salário',
-    'FGTS',
-    'direitos trabalhistas',
-    'CLT',
-  ],
+  keywords: siteConfig.keywords,
   authors: [
     {
       name: siteConfig.author.name,
-      url: siteConfig.url,
+      url: siteConfig.author.url,
     },
   ],
   creator: siteConfig.author.name,
+  publisher: siteConfig.organization.name,
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: siteConfig.url,
+    languages: {
+      'pt-BR': siteConfig.url,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
-    siteName: siteConfig.name,
+    siteName: siteConfig.shortName,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${siteConfig.shortName} - Calculadoras Trabalhistas Gratuitas`,
+        type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
-    description: siteConfig.description,
+    description: siteConfig.shortDescription,
     images: [siteConfig.ogImage],
-    creator: '@calctrabalhista',
+    creator: '@nextcalc',
+    site: '@nextcalc',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/logo.svg', sizes: '180x180', type: 'image/svg+xml' },
+    ],
+  },
+  manifest: '/manifest.json',
+  category: siteConfig.category,
+  classification: 'Calculadoras Trabalhistas',
+  other: {
+    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || '',
+    'msvalidate.01': process.env.BING_SITE_VERIFICATION || '',
   },
 };
 
@@ -100,7 +124,15 @@ export default function RootLayout({
         )}
         
         {/* Google AdSense */}
-        {ADSENSE_ID && (
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3660869229459383"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        
+        {/* Fallback AdSense (se variável de ambiente estiver definida) */}
+        {ADSENSE_ID && ADSENSE_ID !== 'ca-pub-3660869229459383' && (
           <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
