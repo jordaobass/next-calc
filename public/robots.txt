@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or internal pages (if any)
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow all calculators
+Allow: /calculadoras/
+Allow: /rescisao/
+Allow: /ferias/
+Allow: /decimo-terceiro/
+Allow: /fgts/
+
+# Sitemap location
+Sitemap: https://calctrabalhista.com.br/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

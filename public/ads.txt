@@ -1,0 +1,12 @@
+# ads.txt file for CalcTrabalhista
+# This file is required for Google AdSense approval
+
+# Google AdSense
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Note: Replace pub-XXXXXXXXXXXXXXXX with your actual AdSense Publisher ID
+# This file must be accessible at: https://yourdomain.com/ads.txt
+
+# Additional ad networks can be added here when needed
+# Example:
+# network.com, pub-id, DIRECT/RESELLER, certification-authority-id
