@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { JsonLd, breadcrumbSchema } from '@/components/seo/JsonLd';
 import { siteConfig } from '@/lib/config/site';
 import { CalculationHistory } from '@/components/calculators/shared/CalculationHistory';
+import { ResponsiveAd } from '@/components/shared/AdPlaceholder';
 
 export const metadata: Metadata = {
   title: 'Calculadoras Trabalhistas',
@@ -104,6 +105,9 @@ export default function CalculadorasPage() {
     <>
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <div className="container mx-auto px-4 py-16">
+      {/* Ad Above Content */}
+      <ResponsiveAd className="mb-12" minHeight={100} />
+      
       <div className="text-center space-y-4 mb-12">
         <h1 className="text-4xl font-bold">Calculadoras Trabalhistas</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -112,7 +116,11 @@ export default function CalculadorasPage() {
         </p>
       </div>
 
-      {categories.map((category) => (
+      {categories.map((category, index) => (
+        <>
+          {index === 1 && (
+            <ResponsiveAd className="my-12" minHeight={120} />
+          )}
         <section key={category} className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">{category}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -135,6 +143,7 @@ export default function CalculadorasPage() {
               ))}
           </div>
         </section>
+        </>
       ))}
       
       {/* Recent Calculations History */}

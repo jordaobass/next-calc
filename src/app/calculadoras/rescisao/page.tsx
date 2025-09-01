@@ -12,6 +12,7 @@ import { useAnalytics } from '@/lib/hooks/useAnalytics';
 import { useCalculationHistory } from '@/lib/hooks/useCalculationHistory';
 import { CalculationHistory } from '@/components/calculators/shared/CalculationHistory';
 import { formatCurrency } from '@/lib/calculations/utils';
+import { ResponsiveAd } from '@/components/shared/AdPlaceholder';
 
 export default function RescisaoPage() {
   const [result, setResult] = useState<RescissionResult | null>(null);
@@ -113,6 +114,9 @@ export default function RescisaoPage() {
       <JsonLd data={breadcrumbSchema(breadcrumbs)} />
       <JsonLd data={calculatorSchemaData} />
       <div className="container mx-auto px-4 py-8">
+      {/* Ad Above Form */}
+      <ResponsiveAd className="mb-8" minHeight={100} />
+      
       <div className="text-center space-y-4 mb-8">
         <h1 className="text-4xl font-bold">Calculadora de Rescisão Trabalhista</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -131,11 +135,16 @@ export default function RescisaoPage() {
         )}
         
         {result && (
-          <RescisaoResult 
-            result={result} 
-            onExportPDF={handleExportPDF}
-            onShare={handleShare}
-          />
+          <>
+            <RescisaoResult 
+              result={result} 
+              onExportPDF={handleExportPDF}
+              onShare={handleShare}
+            />
+            
+            {/* Ad After Results */}
+            <ResponsiveAd className="my-8" minHeight={120} />
+          </>
         )}
         
         {/* Calculation History */}

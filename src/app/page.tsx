@@ -7,6 +7,7 @@ import { StatsSection } from '@/components/sections/home/StatsSection';
 import { CTASection } from '@/components/sections/home/CTASection';
 import { JsonLd, organizationSchema, websiteSchema } from '@/components/seo/JsonLd';
 import { siteConfig } from '@/lib/config/site';
+import { ResponsiveAd } from '@/components/shared/AdPlaceholder';
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -20,10 +21,22 @@ export default function Home() {
       <JsonLd data={websiteSchema} />
       <div className="flex flex-col">
         <HeroSection />
+        
+        {/* Ad After Hero */}
+        <ResponsiveAd className="my-12" minHeight={100} />
+        
         <BenefitsSection />
         <StatsSection />
+        
+        {/* Ad Between Stats and Testimonials */}
+        <ResponsiveAd className="my-12" minHeight={120} />
+        
         <TestimonialsSection />
         <CTASection />
+        
+        {/* Ad Before FAQ */}
+        <ResponsiveAd className="my-12" minHeight={100} />
+        
         <FAQSection />
       </div>
     </>
