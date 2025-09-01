@@ -2,9 +2,7 @@
 # This file is required for Google AdSense approval
 
 # Google AdSense
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
-
-# Note: Replace pub-XXXXXXXXXXXXXXXX with your actual AdSense Publisher ID
+google.com, pub-3660869229459383, DIRECT, f08c47fec0942fa0
 # This file must be accessible at: https://yourdomain.com/ads.txt
 
 # Additional ad networks can be added here when needed
