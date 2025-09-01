@@ -108,23 +108,20 @@ export default function RootLayout({
       <head>
         {/* Google AdSense Account Verification */}
         <meta name="google-adsense-account" content="ca-pub-3660869229459383" />
-        {/* Google Analytics */}
-        {GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
+        {/* Google Analytics - Updated to match your code */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q43HL57L8N"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q43HL57L8N');
+          `}
+        </Script>
         
         {/* Google AdSense */}
         <script
